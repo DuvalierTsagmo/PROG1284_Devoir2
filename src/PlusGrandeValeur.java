@@ -15,14 +15,23 @@ public class PlusGrandeValeur {
         int max = 100;
         int min = 0;
         int tailleTableau = 15;
+        int indexPlusGrand = 0;
         int[] tableau = new int[tailleTableau];
         // remplissons le tableau
         for (int i = 0; i < tableau.length; i++) {
             tableau[i] = rand.nextInt(max - min + 1) + min;
         } 
-        System.out.print(" **********Afficage du tableau*********** ");
-
-        System.out.println(maxIndex(tableau));
+        // on recherche le plus grand
+        indexPlusGrand = maxIndex(tableau);
+        // on affiche les informations du tableau
+        System.out.print(" **********Afficage du tableau***********\n");
+        for (int i = 0; i < tableau.length; i++) {
+            System.out.format("tableau[%d] = %d\n", i, tableau[i]);
+        }
+        
+        // on affiche les info du max
+        System.out.println("le plus grand nombre du tableau : " + tableau[indexPlusGrand]);
+        System.out.println("il est à l'index : " + indexPlusGrand);
     }
 
     static int maxIndex(int[] tab) {
