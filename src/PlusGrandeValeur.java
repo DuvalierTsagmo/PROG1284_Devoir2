@@ -10,5 +10,15 @@ import java.util.Scanner;
 import java.util.Random;
 public class PlusGrandeValeur {
     public static void main(String[] args) {
-       
+        Scanner sc = new Scanner(System.in);
+        Random rand = new Random();
+        int max = 100;
+        int min = 0;
+        int tailleTableau = 15;
+        int[] tableau = new int[tailleTableau];
+        // remplissons le tableau
+        for (int i = 0; i < tableau.length; i++) {
+            tableau[i] = rand.nextInt(max - min + 1) + min;
+        } 
+        System.out.print(" **********Afficage du tableau*********** ");
 }
