@@ -21,4 +21,17 @@ public class PlusGrandeValeur {
             tableau[i] = rand.nextInt(max - min + 1) + min;
         } 
         System.out.print(" **********Afficage du tableau*********** ");
+
+        System.out.println(maxIndex(tableau));
+    }
+
+    static int maxIndex(int[] tab) {
+        int res = 0;
+        for (int i = 1; i < tab.length; i++) {
+            if (tab[i] > tab[res]) {
+                res = i;
+            }
+        }
+        return res;
+    }
 }
